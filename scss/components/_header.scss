@@ -66,7 +66,7 @@
                 background-color: none;
                 z-index: 1000;
                 margin-top: -1px;
-                transition: .6s;
+                transition: .5s;
                 visibility: hidden;
                 overflow-y: hidden;
                 height: 100vh;
@@ -95,10 +95,6 @@
         #hamburguer {
             border-top-color: transparent;
             color: #fff;
-            position: absolute;
-            top: 30px;
-            right: 20px;
-            z-index: 9999;
         }
 
         #hamburguer::before {
@@ -130,6 +126,10 @@
     color: $main-orange;
     border-top: 3px solid;
     width: 30px;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    z-index: 9999;
 }
 
 #hamburguer::after,
