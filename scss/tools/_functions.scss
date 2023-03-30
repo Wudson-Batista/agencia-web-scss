@@ -1,0 +1,25 @@
+@mixin breakpoint($point) {
+    @if $point =="mobile" {
+        @media (max-width: 599px) {
+            @content
+        }
+    }
+
+    ;
+
+    @if $point =="mid" {
+        @media (max-width: 768px) {
+            @content
+        }
+    }
+
+    ;
+
+    @if $point =="large" {
+        @media (max-width: 1024px) {
+            @content
+        }
+    }
+
+    ;
+}
