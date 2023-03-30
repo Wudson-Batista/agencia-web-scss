@@ -1,0 +1,35 @@
+.first-section {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 500px;
+
+    >.title {
+        font-size: 4.2rem;
+        line-height: 130%;
+        margin-bottom: 2rem;
+    }
+
+    >.subtitle {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+}
+
+.know-more {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+
+    >.mail {
+        width: 50%;
+    }
+
+    >.button {
+        @extend .btn-orange;
+    }
+
+}
