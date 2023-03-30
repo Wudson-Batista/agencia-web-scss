@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+@import "./settings/variables";
+
+@import "./tools/functions";
+
+@import "./generics/reset";
+
+@import "./base/style";
+
+@import "./objects/style";
+
+@import "./components/header";
+@import "./components/first-section";
+
+@import "./trumps/variants";
