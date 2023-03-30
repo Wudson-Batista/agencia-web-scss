@@ -1,0 +1,44 @@
+.header-wrapper {
+    background-image: url(../../images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+
+    color: white;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+
+    >.logo {
+        font-size: 3.2rem;
+    }
+
+    >.menu-nav {
+        >.menu {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 6rem;
+
+            >.item {
+                >.link {
+                    color: white;
+                    font-size: 1.8rem;
+                    font-size: 400;
+                    letter-spacing: 1px;
+                }
+
+                >.button {
+                    @extend .btn-light-outline;
+                }
+            }
+
+
+        }
+    }
+}
