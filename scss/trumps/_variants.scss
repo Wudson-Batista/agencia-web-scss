@@ -1,6 +1,7 @@
 .btn-orange {
     background-color: $main-orange;
     color: white;
+    @extend .btn-rounded;
 
     &:hover {
         background-color: $main-orange-hover;
@@ -11,5 +12,6 @@
     background-color: rgba($color: #fff, $alpha: .1);
     border: 2px solid #fff;
     color: white;
+    @extend .btn-rounded;
 
 }
