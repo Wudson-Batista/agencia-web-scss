@@ -26,19 +26,115 @@
             gap: 6rem;
 
             >.item {
+
+                @include breakpoint(large) {
+                    padding: 0 30px;
+                    display: inline-block;
+                    width: 100%;
+                }
+
                 >.link {
                     color: white;
                     font-size: 1.8rem;
                     font-size: 400;
                     letter-spacing: 1px;
+
+                    @include breakpoint(mid) {
+                        padding: 1rem 0;
+                        margin: 0 1rem;
+                        border-bottom: 2px solid rgba(0, 0, 0, .9);
+                        display: inline-block;
+                        width: 100%;
+                    }
+
                 }
 
                 >.button {
                     @extend .btn-light-outline;
+
+                    @include breakpoint(mid) {
+                        margin-top: 2rem;
+                    }
                 }
             }
 
+            @include breakpoint(large) {
+                position: absolute;
+                width: 0;
+                top: 0px;
+                right: 0px;
+                background-color: none;
+                z-index: 1000;
+                margin-top: -1px;
+                transition: .6s;
+                visibility: hidden;
+                overflow-y: hidden;
+                height: 100vh;
+                background-color: $main-orange;
+                padding-top: 100px;
 
+
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
         }
     }
+
+    .active {
+        >.menu {
+            width: 60%;
+            visibility: visible;
+            overflow-y: auto;
+
+        }
+
+        #hamburguer {
+            border-top-color: transparent;
+            color: #fff;
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            z-index: 9999;
+        }
+
+        #hamburguer::before {
+            transform: rotate(135deg);
+        }
+
+        #hamburguer::after {
+            transform: rotate(-135deg);
+            top: -9px;
+        }
+    }
+}
+
+
+
+.menu-btn {
+    display: flex;
+    padding: .5rem 1rem;
+    font-size: 3rem;
+    background: transparent;
+    cursor: pointer;
+    gap: .5rem;
+}
+
+
+#hamburguer {
+    color: $main-orange;
+    border-top: 3px solid;
+    width: 30px;
+}
+
+#hamburguer::after,
+#hamburguer::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: currentColor;
+    margin-top: 6px;
+    transition: .3s;
+    position: relative;
 }
