@@ -1,28 +1,32 @@
 .first-section {
-    .container {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        max-width: 500px;
 
-        >.title {
-            font-size: 4.2rem;
-            line-height: 130%;
-            margin-bottom: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 500px;
 
-            @include breakpoint(mid) {
-                font-size: 3rem;
-            }
+    @include breakpoint(mobile) {
+        padding-right: 2%;
+    }
+
+    >.title {
+        font-size: 4.2rem;
+        line-height: 130%;
+        margin-bottom: 2rem;
+
+        @include breakpoint(mid) {
+            font-size: 3rem;
+        }
+    }
+
+    >.subtitle {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+
+        @include breakpoint(mid) {
+            font-size: 1.6rem;
         }
 
-        >.subtitle {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-
-            @include breakpoint(mid) {
-                font-size: 1.6rem;
-            }
-        }
     }
 
 }
