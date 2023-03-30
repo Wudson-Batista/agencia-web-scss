@@ -28,7 +28,7 @@
             >.item {
 
                 @include breakpoint(large) {
-                    padding: 0 30px;
+                    padding: 0 20px;
                     display: inline-block;
                     width: 100%;
                 }
@@ -39,10 +39,10 @@
                     font-size: 400;
                     letter-spacing: 1px;
 
-                    @include breakpoint(mid) {
+                    @include breakpoint(large) {
                         padding: 1rem 0;
                         margin: 0 1rem;
-                        border-bottom: 2px solid rgba(0, 0, 0, .9);
+                        border-bottom: 2px solid #fff;
                         display: inline-block;
                         width: 100%;
                     }
@@ -52,7 +52,7 @@
                 >.button {
                     @extend .btn-light-outline;
 
-                    @include breakpoint(mid) {
+                    @include breakpoint(large) {
                         margin-top: 2rem;
                     }
                 }
@@ -70,9 +70,9 @@
                 visibility: hidden;
                 overflow-y: hidden;
                 height: 100vh;
-                background-color: $main-orange;
+                // background-color: $main-orange;
+                background-color: #231612f1;
                 padding-top: 100px;
-
 
                 flex-direction: column;
                 align-items: flex-start;
@@ -83,10 +83,13 @@
 
     .active {
         >.menu {
-            width: 60%;
+            width: 40%;
             visibility: visible;
             overflow-y: auto;
 
+            @include breakpoint(mid) {
+                width: 59%;
+            }
         }
 
         #hamburguer {
@@ -109,15 +112,17 @@
     }
 }
 
-
-
 .menu-btn {
-    display: flex;
+    display: none;
     padding: .5rem 1rem;
     font-size: 3rem;
     background: transparent;
     cursor: pointer;
     gap: .5rem;
+
+    @include breakpoint(large) {
+        display: flex;
+    }
 }
 
 
