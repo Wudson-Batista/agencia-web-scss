@@ -1,0 +1,41 @@
+.testimony-section {
+    padding: 6rem 0;
+    margin-bottom: 10rem;
+
+    >.container {
+        >.background {
+            background-image: url(../../images/bg2.jpg);
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            position: relative;
+
+            @include breakpoint(mobile) {
+                height: 300px;
+            }
+
+            >.box {
+                background-color: #fff;
+                width: calc(500px - 3rem);
+                padding: 4rem;
+                position: absolute;
+                top: 50%;
+                right: 6%;
+                border-radius: 3px;
+                box-shadow: 5px 10px 15px -3px rgba(0, 0, 0, 0.2);
+                color: $gray;
+
+                @include breakpoint(mid) {
+                    width: 90%;
+                }
+
+                >.author {
+                    font-weight: 600;
+                    display: block;
+                    padding-top: 3rem;
+                }
+
+            }
+        }
+    }
+}
