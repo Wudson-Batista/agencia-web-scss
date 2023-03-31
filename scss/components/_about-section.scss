@@ -1,5 +1,11 @@
 .about-section {
-    padding: 6rem 0;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+
+    @include breakpoint(mid) {
+        
+    }
+
 
     >.container {
         >.slogan {
@@ -24,7 +30,7 @@
         }
 
         >.content {
-            padding: 6rem 0;
+            margin-top: 6rem;
             display: grid;
             grid-template-columns: 1fr 1.5fr;
             align-items: center;
@@ -51,6 +57,11 @@
                 padding: 3rem;
                 display: flex;
                 justify-content: center;
+
+                @include breakpoint(mobile) {
+                    padding: 1rem;
+                }
+
                 >.img {
                     width: 100%;
 
