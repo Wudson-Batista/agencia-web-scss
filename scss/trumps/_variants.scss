@@ -9,9 +9,12 @@
 }
 
 .btn-light-outline {
-    background-color: rgba($color: #fff, $alpha: .1);
-    border: 2px solid #fff;
-    color: white;
+    @include btn-outline(#fff);
     @extend .btn-rounded;
-
 }
+
+.btn-outline-gray {
+    @include btn-outline($light-gray);
+    @extend .btn-rounded;
+}
+
