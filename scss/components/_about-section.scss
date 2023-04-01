@@ -35,6 +35,10 @@
             grid-template-columns: 1fr 1.5fr;
             align-items: center;
 
+            @include breakpoint(mid) {
+                gap: 2rem;
+            }
+
             @include breakpoint(large) {
                 grid-template-columns: 1fr;
             }
