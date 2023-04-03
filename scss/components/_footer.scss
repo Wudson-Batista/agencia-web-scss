@@ -1,0 +1,61 @@
+.footer-section {
+    margin-top: 6rem;
+    padding: 3rem 0;
+
+    >.container {
+        >.content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 2fr;
+            gap: 3rem;
+
+            @include breakpoint(large) {
+                grid-template-columns: 1fr;
+            }
+
+            >* {
+                >.title {
+                    margin-bottom: 1rem;
+                }
+
+                >.text {
+                    color: $light-gray;
+                }
+            }
+
+            >.newsletter {
+                >.send {
+                    display: flex;
+                    gap: 1rem;
+                    >.input {
+                        border: 1px solid $light-gray;
+                        width: 90%;
+                        
+                        @include breakpoint(large) {
+                            width: 50%;
+
+                        }
+
+                        @include breakpoint(mid) {
+                            width: 70%;
+                        }
+
+                        @include breakpoint(mobile) {
+                            width: 90%;
+                        }
+
+                    }
+
+                    .btn-outline {
+                        @extend .btn-rounded;
+                        padding: 1rem 2rem;
+                        border: 1px solid $light-gray;
+                        font-size: 1.8rem;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+}
