@@ -1,5 +1,7 @@
 const mobileBtn = document.getElementById('btn-mobile');
 
+document.querySelector('textarea').value = "";
+
 const toggleMenu = (e) => {
     if (e.type == 'touchstart') {
         e.preventDefault();
