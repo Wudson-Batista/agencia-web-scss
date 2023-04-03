@@ -14,15 +14,19 @@
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.5rem;
     margin: 3rem 0;
 
     >.btn-orange {
         text-align: center;
         margin: 0 auto;
-        padding-left: 5rem;
-        padding-right: 5rem;
-        margin-top: 2rem;
+        width: 200px;
+        margin-top: 1rem;
+        
+        @include breakpoint(mobile) {
+            width: 100%;
+
+        }
     }
 }
 
