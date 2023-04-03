@@ -9,12 +9,27 @@
 }
 
 .btn-light-outline {
-    @include btn-outline(#fff);
+    @include btn-outline(#fff, $main-orange);
     @extend .btn-rounded;
+
+
 }
 
 .btn-outline-gray {
-    @include btn-outline($light-gray);
+    @extend .btn-light-outline;
+    @include btn-outline($light-gray, $light-gray);
     @extend .btn-rounded;
-}
 
+    &::after {
+        background-color: $light-gray;
+        transform: translate(-100%, 0);
+    }
+
+    &:hover::after {
+        transform: translate(0, 0);
+    }
+
+    &:hover {
+        transform: none;
+    }
+}
